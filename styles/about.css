@@ -1,0 +1,151 @@
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#fff;
+    color: #333;
+}
+
+
+header {
+    background-color: #2e5d34;
+    color: #fff;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a.active,
+nav a:hover {
+    color: rgb(184, 155, 116);
+}
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #f1f0eb;
+  gap: 2rem;
+}
+
+.about-hero-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.about-text h1 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.about-text p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 800px;
+  line-height: 1.5;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.partner-farms {
+  padding: 2.5rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.partner-farms h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.farm-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.farm-logo img {
+  width: clamp(100px, 15vw, 200px);
+  height: auto;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.farm-logo img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 2rem 1rem;
+  }
+
+  .about-text h1 {
+    font-size: 2rem;
+  }
+
+  .partner-farms {
+    padding: 2rem 1rem;
+  }
+
+  .farm-logos {
+    gap: 1.5rem;
+  }
+
+  .farm-logo img {
+    width: clamp(80px, 20vw, 160px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-hero {
+    flex-direction: row;
+    text-align: left;
+    padding: 4rem 4rem;
+  }
+
+  .about-text {
+    flex: 1;
+    padding-left: 2rem;
+  }
+
+  .partner-farms {
+    padding: 3rem 4rem;
+  }
+
+  .farm-logos {
+    gap: 3rem;
+  }
+}
+
+footer {
+    background-color: #2e5d34;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
