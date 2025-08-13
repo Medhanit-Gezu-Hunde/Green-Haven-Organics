@@ -17,6 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
 }
 
 header .logo {
@@ -46,11 +47,13 @@ nav a:hover {
 
 .hero h1 {
     font-size: 2.5rem;
+    animation: fadeInUp 1.5s ease-in-out forwards;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin: 15px 0;
+    animation: fadeInUp 1.5s ease-in-out forwards;
 }
 
 .btn {
@@ -69,6 +72,7 @@ nav a:hover {
 .why-organic {
     text-align: center;
     padding: 50px 5%;
+     animation: fadeInUp 1.5s ease-in-out forwards
 }
 
 .icons {
@@ -80,13 +84,14 @@ nav a:hover {
 
 .icons div {
     max-width: 150px;
+    animation: bounce 1.5s infinite;
 }
 
 .icon-leaf::before {
     content: "\f06c";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 4rem;
     color: #2e5d34;
 }
 
@@ -94,7 +99,7 @@ nav a:hover {
     content: "\f57d";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 4rem;
     color: #2e5d34;
 }
 
@@ -102,37 +107,164 @@ nav a:hover {
     content: "\f1b8";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 4rem;
     color: #2e5d34;
 }
 
-
 .featured-products {
     padding: 50px 5%;
+    text-align: center;
 }
+
+.featured-products h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.featured-products h2::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #a3c47d;
+    margin-top: 5px;
+    transition: width 0.3s ease;
+}
+
+.featured-products h2:hover {
+    color:#2e5d34;
+    transform: translateY(-3px);
+}
+
+.featured-products h2:hover::after {
+    width: 100%;
+}
+
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
-
 .product-card {
     background: #fff;
-    border-radius: 10px;
+    width: 300px;
+    border-radius: 25px;
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
 }
 
 .product-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
+
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+.product-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(163, 196, 125, 0.15);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover::after {
+    opacity: 1;
+}
+
 
 .product-card h3 {
     margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon p {
+        font-size: 0.9rem;
+    }
+
+    .product h3 {
+        font-size: 1rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon p {
+        font-size: 1.1rem;
+    }
+
+    .featured-products {
+        gap: 30px;
+    }
+
+    .product h3 {
+        font-size: 1.4rem;
+    }
+
+    .product p {
+        font-size: 1rem;
+    }
 }
 
 footer {
