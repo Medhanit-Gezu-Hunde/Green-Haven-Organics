@@ -140,13 +140,6 @@ nav a:hover {
 }
 
 
-footer {
-  background-color: #2e5d34;
-  text-align: center;
-  padding: 1rem;
-  color:#fff;
-  margin-top: 2rem;
-}
 
 
 @media (max-width: 768px) {
