@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f8fdf5;
     color: #333;
+        background-image: url(../images/happy\ customer.png);
 }
 
 header {
@@ -46,7 +47,6 @@ nav a:hover {
 
 
 .hero {
-    background: url('/images/cover.webp') center/cover no-repeat;
     text-align: center;
     color: #fff;
     padding: 80px 20px;
@@ -114,11 +114,17 @@ footer p {
   .hero h1 {
     font-size: 2rem;
   }
+  .testimonials {
+        padding: 3rem 5%; 
+  }
 }
 
 @media (min-width: 1024px) {
   .hero {
     padding: 7rem 2rem;
   }
+  .testimonials {
+        padding: 5rem 5%; 
+    }
 }
 
