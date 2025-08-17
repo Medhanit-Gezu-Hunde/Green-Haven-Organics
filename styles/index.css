@@ -67,7 +67,10 @@ nav a:hover {
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
-
+.hero h1, .hero p, .hero .btn {
+    position: relative;
+    z-index: 2;
+}
 .btn:hover{
      background-color: #8fb268
 }
@@ -236,7 +239,7 @@ nav a:hover {
         font-size: 0.9rem;
     }
 
-    .product h3 {
+    .product-card h3 {
         font-size: 1rem;
     }
 }
@@ -260,7 +263,7 @@ nav a:hover {
         gap: 30px;
     }
 
-    .product h3 {
+    .product-card h3 {
         font-size: 1.4rem;
     }
 
