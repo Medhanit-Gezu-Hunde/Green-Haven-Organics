@@ -30,18 +30,31 @@ CSS3 – custom styling and layout
 📂 Project Structure
 Green-Haven-Organics/
 │── index.html       # Main homepage  
+
 │── about.html       # About section  
+
 │── product.html     # Products page 
+
 │── Testimonials.html     #Testimonials page  
+
 │── contact.html     # Contact page  
+
 │── /styles 
+     
      │── index.css
+     
      │── about.css 
+     
      │── product.css 
+     
      |--Testimonials.css
+     
      │── contact.css
+
 │── /images       #product and images of customers
+
 │── /icons          #farm logo
+
 │── README.md        # Documentation  
 
 Deployed link:https://green-haven-organics.netlify.app/
