@@ -6,17 +6,25 @@ The design was created in Figma and implemented using HTML and CSS.
 ✨ Features
 
 Portfolio-style website for a sustainable organic brand
+
 Clean and modern design based on Figma mockups
+
 Responsive layout built with HTML & CSS
+
 animations
+
 Earthy branding with green, beige, and brown color palette
+
 Sections for Home, About,Products, Testimonials and Contact
 
 🛠️ Tech Stack
 
 Figma – UI/UX design
+
 HTML5 – site structure
+
 Font Awesome icons
+
 CSS3 – custom styling and layout
 
 📂 Project Structure
